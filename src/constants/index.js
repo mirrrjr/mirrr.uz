@@ -5,6 +5,8 @@ import {
   web,
   javascript,
   typescript,
+  php,
+  laravel,
   html,
   css,
   reactjs,
@@ -85,6 +87,14 @@ const technologies = [
     icon: redux,
   },
   {
+    name: "PHP",
+    icon: php,
+  },
+  {
+    name: "Laravel",
+    icon: laravel,
+  },
+  {
     name: "Tailwind CSS",
     icon: tailwind,
   },
@@ -96,18 +106,18 @@ const technologies = [
     name: "MongoDB",
     icon: mongodb,
   },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
+  // {
+  //   name: "Three JS",
+  //   icon: threejs,
+  // },
+  // {
+  //   name: "git",
+  //   icon: git,
+  // },
+  // {
+  //   name: "figma",
+  //   icon: figma,
+  // },
   {
     name: "docker",
     icon: docker,
