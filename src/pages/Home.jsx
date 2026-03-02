@@ -4,6 +4,7 @@ import { BiLogoGmail } from "react-icons/bi";
 import { BsGithub } from "react-icons/bs";
 import { TypeAnimation } from "react-type-animation";
 import { RiBlueskyFill } from "react-icons/ri";
+import { ImBlog } from "react-icons/im";
 
 export default function Home() {
     const socialLinks = [
@@ -11,6 +12,7 @@ export default function Home() {
         { Icon: IoLogoLinkedin, href: "https://linkedin.com/in/mirrrjr" },
         { Icon: RiBlueskyFill, href: "https://bsky.app/profile/mirrr.uz" },
         { Icon: BsGithub, href: "https://github.com/mirrrjr" },
+        { Icon: ImBlog, href: "https://blog.mirrr.uz" }
     ];
     return (
         <div className="mt-20" id="home">
