@@ -1,22 +1,24 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { FaJs, FaReact, FaNodeJs, FaDatabase, FaJava, FaPhp, FaLaravel } from "react-icons/fa";
-import { BiLogoPostgresql, BiLogoTypescript } from "react-icons/bi";
-import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { DiMysql } from "react-icons/di";
+import { TbBrandNextjs, TbBrandTypescript, TbBrandJavascript, TbBrandReact, TbBrandPhp, TbBrandLaravel, TbBrandMysql, TbBrandMongodb, TbBrandTailwind, TbBrandGolang, TbBrandDocker, TbBrandGit } from "react-icons/tb";
+import { SiLinux, SiNestjs, SiPostgresql } from "react-icons/si";
 
 export default function Skills() {
     const [skills] = useState([
-        { id: 1, name: "JavaScript", icon: <FaJs size={50} /> },
-        { id: 10, name: "Typescript", icon: <BiLogoTypescript size={50} /> },
-        { id: 4, name: "PHP", icon: <FaPhp size={50} /> },
-        { id: 2, name: "React", icon: <FaReact size={50} /> },
-        { id: 8, name: "Next.js", icon: <RiNextjsFill size={50} /> },
-        { id: 6, name: "Laravel", icon: <FaLaravel size={50} /> },
-        { id: 3, name: "MySQL", icon: <DiMysql size={50} /> },
-        { id: 7, name: "Postgresql", icon: <BiLogoPostgresql size={50} /> },
-        { id: 5, name: "MongoDB", icon: <FaDatabase size={50} /> },
-        { id: 9, name: "Tailwind", icon: <RiTailwindCssFill size={50} /> },
+        { id: 10, name: "Typescript", icon: <TbBrandTypescript size={50} /> },
+        { id: 4, name: "PHP", icon: <TbBrandPhp size={50} /> },
+        { id: 1, name: "GO", icon: <TbBrandGolang size={50} /> },
+        { id: 6, name: "Laravel", icon: <TbBrandLaravel size={50} /> },
+        { id: 11, name: "Nest.js", icon: <SiNestjs size={50} /> },
+        { id: 2, name: "React", icon: <TbBrandReact size={50} /> },
+        { id: 8, name: "Next.js", icon: <TbBrandNextjs size={50} /> },
+        { id: 3, name: "MySQL", icon: <TbBrandMysql size={50} /> },
+        { id: 7, name: "Postgresql", icon: <SiPostgresql size={50} /> },
+        { id: 5, name: "MongoDB", icon: <TbBrandMongodb size={50} /> },
+        { id: 9, name: "Tailwind", icon: <TbBrandTailwind size={50} /> },
+        { id: 12, name: "Linux", icon: <SiLinux size={50} /> },
+        { id: 13, name: "Docker", icon: <TbBrandDocker size={50} /> },
+        { id: 14, name: "Git", icon: <TbBrandGit size={50} /> },
     ]);
 
     const [experiences] = useState([
