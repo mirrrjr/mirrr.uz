@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { TbBrandNextjs, TbBrandTypescript, TbBrandJavascript, TbBrandReact, TbBrandPhp, TbBrandLaravel, TbBrandMysql, TbBrandMongodb, TbBrandTailwind, TbBrandGolang, TbBrandDocker, TbBrandGit } from "react-icons/tb";
+import { TbBrandNextjs, TbBrandTypescript, TbBrandReact, TbBrandPhp, TbBrandLaravel, TbBrandMysql, TbBrandMongodb, TbBrandTailwind, TbBrandGolang, TbBrandDocker, TbBrandGit } from "react-icons/tb";
 import { SiLinux, SiNestjs, SiPostgresql } from "react-icons/si";
 
 export default function Skills() {

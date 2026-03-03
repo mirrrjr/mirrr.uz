@@ -40,7 +40,7 @@ export default function Navbar() {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     onClick={() => scrollToSection("home")}
-                    className="h-9 cursor-pointer"
+                    className="h-5 md:h-7 lg:h-10 cursor-pointer"
                     src="/assets/mirrr.svg"
                     alt="Logo"
                 />
