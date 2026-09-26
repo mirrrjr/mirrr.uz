@@ -32,8 +32,9 @@ export default function Navbar() {
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className={`fixed lg:px-28 px-5 top-0 left-0 w-full z-50 bg-white p-5 transition-shadow duration-300 ${hasShadow ? "shadow-md" : "shadow-none"
-                }`}
+            className={`fixed lg:px-28 px-5 top-0 left-0 w-full z-50 bg-white p-5 transition-shadow duration-300 ${
+                hasShadow ? "shadow-md" : "shadow-none"
+            }`}
         >
             <div className="container mx-auto flex justify-between items-center">
                 <motion.img
@@ -46,21 +47,26 @@ export default function Navbar() {
                 />
 
                 <ul className="hidden lg:flex items-center gap-x-7 font-semibold">
-                    {["about", "skills", "projects", "contact"].map((section) => (
-                        <motion.li
-                            key={section}
-                            className="group"
-                            whileHover={{ scale: 1.1 }}
-                        >
-                            <button onClick={() => scrollToSection(section)}>
-                                {section.charAt(0).toUpperCase() + section.slice(1)}
-                            </button>
-                            <motion.span
-                                className="w-0 transition-all duration-300 group-hover:w-full h-[2px] bg-black flex"
-                                layout
-                            ></motion.span>
-                        </motion.li>
-                    ))}
+                    {["skills", "about", "projects", "contact"].map(
+                        (section) => (
+                            <motion.li
+                                key={section}
+                                className="group"
+                                whileHover={{ scale: 1.1 }}
+                            >
+                                <button
+                                    onClick={() => scrollToSection(section)}
+                                >
+                                    {section.charAt(0).toUpperCase() +
+                                        section.slice(1)}
+                                </button>
+                                <motion.span
+                                    className="w-0 transition-all duration-300 group-hover:w-full h-[2px] bg-black flex"
+                                    layout
+                                ></motion.span>
+                            </motion.li>
+                        ),
+                    )}
                 </ul>
 
                 <motion.a
@@ -101,17 +107,24 @@ export default function Navbar() {
                             <HiX />
                         </button>
                         <ul className="flex flex-col items-start ml-16 mt-28 h-full gap-y-6 font-semibold">
-                            {["about", "skills", "projects", "contact"].map((section) => (
-                                <motion.li
-                                    key={section}
-                                    className="border-b"
-                                    whileHover={{ scale: 1.1 }}
-                                >
-                                    <button onClick={() => scrollToSection(section)}>
-                                        {section.charAt(0).toUpperCase() + section.slice(1)}
-                                    </button>
-                                </motion.li>
-                            ))}
+                            {["skills", "about", "projects", "contact"].map(
+                                (section) => (
+                                    <motion.li
+                                        key={section}
+                                        className="border-b"
+                                        whileHover={{ scale: 1.1 }}
+                                    >
+                                        <button
+                                            onClick={() =>
+                                                scrollToSection(section)
+                                            }
+                                        >
+                                            {section.charAt(0).toUpperCase() +
+                                                section.slice(1)}
+                                        </button>
+                                    </motion.li>
+                                ),
+                            )}
                             <motion.a
                                 href="assets/resume.pdf"
                                 download

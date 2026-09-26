@@ -1,6 +1,18 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { TbBrandNextjs, TbBrandTypescript, TbBrandReact, TbBrandPhp, TbBrandLaravel, TbBrandMysql, TbBrandMongodb, TbBrandTailwind, TbBrandGolang, TbBrandDocker, TbBrandGit } from "react-icons/tb";
+import {
+    TbBrandNextjs,
+    TbBrandTypescript,
+    TbBrandReact,
+    TbBrandPhp,
+    TbBrandLaravel,
+    TbBrandMysql,
+    TbBrandMongodb,
+    TbBrandTailwind,
+    TbBrandGolang,
+    TbBrandDocker,
+    TbBrandGit,
+} from "react-icons/tb";
 import { SiLinux, SiNestjs, SiPostgresql } from "react-icons/si";
 
 export default function Skills() {
@@ -24,32 +36,33 @@ export default function Skills() {
     const [experiences] = useState([
         {
             id: 1,
-            company: "First Coder Group",
-            role: "Full Stack Developer",
-            period: "Sep 2025 - Present",
+            company: "Al-Farg'oniy Education",
+            role: "Full-Stack Web Teacher",
+            period: "Sep 2026 - Present",
             description:
-                `Built and maintained RESTful APIs to support core backend functionality
-                Developed a Telegram bot using PHP and OpenAI to automate user interactions and educational workflows
-                Worked on a Telegram Mini App built with React.js and Tailwind CSS
-                for an interactive user experience`,
-            logo: "/assets/google.svg",
+                "Teaching full-stack web development, covering both frontend and backend fundamentals to students.",
         },
         {
             id: 2,
+            company: "First Coder Group",
+            role: "Full Stack Developer",
+            period: "Sep 2025 - Jan 2026",
+            description:
+                "Built and maintained RESTful APIs to support core backend functionality. Developed a Telegram bot using PHP and OpenAI to automate user interactions and educational workflows. Worked on a Telegram Mini App built with React.js and Tailwind CSS for an interactive user experience.",
+        },
+        {
+            id: 3,
             company: "HighTech",
             role: "Backend Developer",
             period: "Jul 2025 - Sep 2025",
             description:
-                `Supported and enhanced backend projects using Laravel, MySQL,
-                Blade, and JavaScript to maintain product functionality`,
-            logo: "/assets/youtube.svg",
+                "Supported and enhanced backend projects using Laravel, MySQL, Blade, and JavaScript to maintain product functionality.",
         },
     ]);
 
     return (
         <div className="mt-3 lg:mt-16" id="skills">
             <div className="px-5 lg:px-28">
-
                 <motion.h2
                     className="text-2xl lg:text-4xl text-center"
                     initial={{ opacity: 0, y: -20 }}
@@ -68,7 +81,11 @@ export default function Skills() {
                             className="bg-white border-2 hover:bg-black hover:text-white transition-all cursor-pointer border-black rounded p-3 h-36 w-36 lg:h-44 lg:w-44 flex flex-col items-center justify-center gap-5"
                             initial={{ opacity: 0, y: 5 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, ease: "easeOut", delay: skill.id * 0.1 }}
+                            transition={{
+                                duration: 0.8,
+                                ease: "easeOut",
+                                delay: skill.id * 0.1,
+                            }}
                             viewport={{ once: true }}
                         >
                             {skill.icon}
@@ -76,7 +93,6 @@ export default function Skills() {
                         </motion.div>
                     ))}
                 </div>
-
             </div>
 
             {/* Experience Section */}
@@ -91,40 +107,47 @@ export default function Skills() {
                     My <span className="font-extrabold">Experience</span>
                 </motion.h2>
 
-                {/* Experience Cards */}
-                <div className="px-5 lg:px-28 my-8 lg:mt-16 space-y-10">
-                    {experiences.map((exp, index) => (
-                        <motion.div
-                            key={exp.id}
-                            className="bg-black p-5 border border-[#D4D4D8] rounded-md hover:bg-[#27272A] transition-all cursor-pointer"
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{
-                                type: "spring",
-                                stiffness: 100,
-                                damping: 10,
-                                delay: index * 0.2,
-                            }}
-                            viewport={{ once: true }}
-                        >
-                            <div className="flex justify-between flex-col items-start lg:flex-row lg:items-center">
-                                <div className="flex items-center gap-5">
-                                    <img className="w-7" src={exp.logo} alt="" />
-                                    <h2 className="font-semibold text-white text-lg lg:text-xl">
-                                        {exp.role} at {exp.company}
-                                    </h2>
-                                </div>
-                                <span className="text-[#D4D4D8] font-semibold text-sm mt-4 lg:mt-0 lg:text-base">
-                                    {exp.period}
-                                </span>
-                            </div>
-                            <p className="text-[#D4D4D8] mt-6 text-sm/6 lg:text-base font-light">
-                                {exp.description}
-                            </p>
-                        </motion.div>
-                    ))}
+                {/* Experience Timeline */}
+                <div className="px-5 lg:px-28 my-8 lg:mt-16">
+                    <ol className="relative space-y-10 before:absolute before:inset-y-0 before:left-2 before:w-px before:bg-neutral-800 lg:space-y-14 lg:before:left-1/2">
+                        {experiences.map((exp, index) => (
+                            <motion.li
+                                key={exp.id}
+                                className="relative pl-10 lg:grid lg:grid-cols-[1fr_3rem_1fr] lg:pl-0"
+                                initial={{ opacity: 0, y: 16 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{
+                                    duration: 0.55,
+                                    ease: "easeOut",
+                                    delay: index * 0.12,
+                                }}
+                                viewport={{ once: true }}
+                            >
+                                <span
+                                    aria-hidden="true"
+                                    className="absolute left-[5px] top-1.5 z-10 h-[7px] w-[7px] rounded-full border border-neutral-600 bg-black lg:left-1/2 lg:-translate-x-1/2"
+                                />
+                                <article
+                                    className={`lg:col-span-1 ${index % 2 === 0 ? "lg:col-start-1 lg:row-start-1 lg:text-right" : "lg:col-start-3 lg:row-start-1"}`}
+                                >
+                                    <div
+                                        className={`flex flex-col gap-1 lg:flex-row lg:items-baseline lg:justify-between ${index % 2 === 0 ? "lg:flex-row-reverse" : ""}`}
+                                    >
+                                        <h3 className="text-lg font-bold text-white lg:text-xl">
+                                            {exp.role} at {exp.company}
+                                        </h3>
+                                        <span className="text-sm font-medium text-gray-400 lg:shrink-0 lg:text-base">
+                                            {exp.period}
+                                        </span>
+                                    </div>
+                                    <p className="mt-3 text-sm/6 font-light text-gray-400 lg:text-base">
+                                        {exp.description}
+                                    </p>
+                                </article>
+                            </motion.li>
+                        ))}
+                    </ol>
                 </div>
-
             </div>
         </div>
     );
